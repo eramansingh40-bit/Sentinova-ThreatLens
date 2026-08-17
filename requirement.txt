@@ -1,1 +1,11 @@
+nano requirements.txt
+Put:
+Flask
+requests
 
+CTRL + O
+ENTER
+CTRL + X
+
+pip install -r requirements.txt
+pip list
