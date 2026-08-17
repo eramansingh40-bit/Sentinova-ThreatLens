@@ -127,13 +127,12 @@ Sentinova-ThreatLens/
 │   └── test_detection.py
 │
 ├── screenshots/
-│   ├── 01-project-structure.png
-│   ├── 02-threatlens-dashboard.png
-│   ├── 03-malicious-ip-detected.png
-│   ├── 04-clean-ip-tested.png
-│   ├── 05-incident-created.png
-│   ├── 06-kali-event.png
-│   └── 07-test-results.png
+│  │├── 01-threatlens-dashboard.png
+│   ├── 02-malicious-ip-detected.png
+│   ├── 03-clean-ip-tested.png
+│   ├── 04-incident-created.png
+│   ├── 05-kali-event.png
+│   |
 │
 ├── requirements.txt
 ├── README.md
