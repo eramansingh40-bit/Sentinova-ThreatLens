@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentinova ThreatLens</title>
+</head>
 
+<body>
+
+<h1>Sentinova ThreatLens</h1>
+
+<h2>Threat Intelligence Detection</h2>
+
+<form method="POST" action="/analyze">
+
+    <label>Indicator:</label>
+
+    <input
+        type="text"
+        name="indicator"
+        placeholder="IP / Domain / Hash"
+        required
+    >
+
+    <br><br>
+
+    <label>Event Type:</label>
+
+    <select name="event_type">
+        <option value="network">Network Event</option>
+        <option value="login">Login Event</option>
+        <option value="malware">Malware Event</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Analyze Indicator
+    </button>
+
+</form>
+
+<hr>
+
+{% if alert %}
+
+<h2>Detection Result</h2>
+
+<p>
+<strong>Indicator:</strong>
+{{ alert.indicator }}
+</p>
+
+<p>
+<strong>Detected:</strong>
+{{ alert.detected }}
+</p>
+
+<p>
+<strong>Severity:</strong>
+{{ alert.severity }}
+</p>
+
+<p>
+<strong>Type:</strong>
+{{ alert.type }}
+</p>
+
+<p>
+<strong>Description:</strong>
+{{ alert.description }}
+</p>
+
+{% endif %}
+
+<hr>
+
+<h2>Incidents</h2>
+
+{% for incident in incidents %}
+
+<div>
+
+<p>
+<strong>ID:</strong>
+{{ incident.id }}
+</p>
+
+<p>
+<strong>Indicator:</strong>
+{{ incident.indicator }}
+</p>
+
+<p>
+<strong>Severity:</strong>
+{{ incident.severity }}
+</p>
+
+<p>
+<strong>Status:</strong>
+{{ incident.status }}
+</p>
+
+<hr>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
