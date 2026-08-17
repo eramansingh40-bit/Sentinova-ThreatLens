@@ -1,1 +1,32 @@
-
+{
+    "ips": [
+        {
+            "indicator": "185.199.110.153",
+            "type": "ipv4",
+            "severity": "high",
+            "description": "Simulated malicious IP for laboratory testing"
+        },
+        {
+            "indicator": "10.10.10.50",
+            "type": "ipv4",
+            "severity": "medium",
+            "description": "Simulated suspicious internal IP"
+        }
+    ],
+    "domains": [
+        {
+            "indicator": "malicious-example.test",
+            "type": "domain",
+            "severity": "high",
+            "description": "Simulated malicious domain"
+        }
+    ],
+    "hashes": [
+        {
+            "indicator": "44d88612fea8a8f36de82e1278abb02f",
+            "type": "md5",
+            "severity": "critical",
+            "description": "Simulated malware hash"
+        }
+    ]
+}
